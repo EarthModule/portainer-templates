@@ -137,6 +137,17 @@
         "volumes": [{"container": "/var/lib/postgresql/9/data"}]
       },
     {
+        "type": 1,
+        "title": "PlantUML Server",
+        "description": "PlantUml server with jetty",
+        "categories": ["my-templates", "visualization", "uml"],
+        "platform": "linux",
+        "image": "plantuml/plantuml-server:jetty",
+        "ports": [
+            "8080/tcp"
+        ]
+    },
+    {
       "type": 1,
       "title": "Mongo",
       "description": "Open-source document-oriented database",
