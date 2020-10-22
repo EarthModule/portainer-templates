@@ -1,0 +1,152 @@
+{
+    "version": "2",
+    "templates": [
+      {
+        "type": 1,
+        "title": "Nginx",
+        "description": "High performance web server",
+        "categories": [
+          "webserver"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
+        "image": "nginx:latest",
+        "ports": [
+          "80/tcp",
+          "443/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/etc/nginx"
+          },
+          {
+            "container": "/usr/share/nginx/html"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "PostgreSQL",
+        "description": "The most advanced open-source database",
+        "categories": [
+          "database"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
+        "image": "postgres:latest",
+        "env": [
+          {
+            "name": "POSTGRES_USER",
+            "label": "Superuser"
+          },
+          {
+            "name": "POSTGRES_PASSWORD",
+            "label": "Superuser password"
+          }
+        ],
+        "ports": [
+          "5432/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/var/lib/postgresql/data"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "PostgreSQL 9",
+        "description": "The most advanced open-source database",
+        "categories": [
+          "database"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
+        "image": "postgres:9",
+        "env": [
+          {
+            "name": "POSTGRES_USER",
+            "label": "metax_db_user"
+          },
+          {
+            "name": "POSTGRES_PASSWORD",
+            "label": "YMDLekQMqrVKcs3"
+          }
+        ],
+        "ports": [
+          "5432/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/var/lib/postgresql96/data"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "Elasticsearch",
+        "description": "Open-source search and analytics engine",
+        "categories": [
+          "database"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
+        "image": "elasticsearch:7.9.2",
+        "ports": [
+          "9200/tcp",
+          "9300/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/usr/share/elasticsearch/data"
+          }
+        ],
+        "env": [
+          {
+            "name": "discovery.type",
+            "label": "Discovery Type",
+            "default": "single-node"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "Redis",
+        "description": "Open-source in-memory data structure store",
+        "categories": [
+          "database"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
+        "image": "redis:latest",
+        "ports": [
+          "6379/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "RabbitMQ",
+        "description": "Highly reliable enterprise messaging system",
+        "categories": [
+          "messaging"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/rabbitmq.png",
+        "image": "rabbitmq:latest",
+        "ports": [
+          "5671/tcp",
+          "5672/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/var/lib/rabbitmq"
+          }
+        ]
+      }
+    ]
+  }
