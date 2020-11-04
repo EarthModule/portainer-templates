@@ -161,7 +161,7 @@
       },
       {
         "type": 1,
-        "title": "Bitnami Redis Sentinel",
+        "title": "Redis Sentinel by Bitnami ",
         "description": "Open-source in-memory data structure store",
         "categories": [
           "database"
