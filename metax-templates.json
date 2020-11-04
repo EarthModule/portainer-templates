@@ -168,7 +168,7 @@
         ],
         "platform": "linux",
         "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
-        "image": "bitnami/redis:latest",
+        "image": "bitnami/redis-sentinel:latest",
         "ports": [
           "26379/tcp"
         ],
