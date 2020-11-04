@@ -130,6 +130,37 @@
       },
       {
         "type": 1,
+        "title": "Bitnami-Redis",
+        "description": "Open-source in-memory data structure store",
+        "categories": [
+          "database"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
+        "image": "bitnami/redis:latest",
+        "ports": [
+          "6379/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
+          }
+        ],
+        "env": [
+          {
+            "name": "ALLOW_EMPTY_PASSWORD",
+            "label": "Allow empty password",
+            "default": "no"
+          },
+          {
+            "name": "REDIS_PASSWORD",
+            "label": "Redis password",
+            "default": "NDE6oXov3hpoZV"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "RabbitMQ",
         "description": "Highly reliable enterprise messaging system",
         "categories": [
