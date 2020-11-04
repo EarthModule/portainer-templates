@@ -161,6 +161,55 @@
       },
       {
         "type": 1,
+        "title": "Bitnami Redis Sentinel",
+        "description": "Open-source in-memory data structure store",
+        "categories": [
+          "database"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
+        "image": "bitnami/redis:latest",
+        "ports": [
+          "26379/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
+          }
+        ],
+        "env": [
+          {
+            "name": "REDIS_MASTER_HOST",
+            "label": "Host of the Redis master to monitor",
+            "default": "redis"
+          },
+          {
+            "name": "REDIS_MASTER_PORT_NUMBER",
+            "label": "Port of the Redis master to monitor",
+            "default": "6379"
+          },
+          {
+            "name": "REDIS_MASTER_SET",
+            "label": "Name of the set of Redis instances to monitor",
+            "default": "mymaster"
+          },
+          {
+            "name": "REDIS_MASTER_PASSWORD",
+            "label": "Password to authenticate with the master",
+            "default": "7RewDzhRdXhoYc"
+          },
+          {
+            "name": "REDIS_MASTER_USER",
+            "label": "Username to authenticate with when ACL is enabled for the master"
+          },
+          {
+            "name": "REDIS_SENTINEL_PASSWORD",
+            "label": "Password to authenticate with this sentinel and to authenticate to other sentinels"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "RabbitMQ",
         "description": "Highly reliable enterprise messaging system",
         "categories": [
