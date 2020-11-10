@@ -66,11 +66,13 @@
         "env": [
           {
             "name": "POSTGRES_USER",
-            "label": "metax_db_user"
+            "label": "postgres user",
+            "default": "metax_db_user"
           },
           {
             "name": "POSTGRES_PASSWORD",
-            "label": "YMDLekQMqrVKcs3"
+            "label": "postgres password",
+            "default": "YMDLekQMqrVKcs3"
           }
         ],
         "ports": [
